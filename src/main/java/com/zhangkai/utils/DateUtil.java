@@ -22,6 +22,30 @@ import java.util.Date;
  */
 public class DateUtil {
 	
+	
+	/**
+	 * 
+	 * @Title: getDateByMonthSub 
+	 * @Description: 用传入的日期减去对应的月份
+	 * @param date
+	 * @param month
+	 * @return
+	 * @return: Date
+	 */
+	public static Date getDateByMonthSub(Date date,Integer month) {
+		
+		 Calendar c = Calendar.getInstance();
+		 //用传入的日期,初始化日历类
+		 c.setTime(date);
+		 //用日历类减去month
+		 c.add(Calendar.MONTH, -month);
+		return c.getTime();
+	}
+	
+	
+	
+	
+	
 	//返回一个在某个时间段的随机日期
 	
 	public static Date randomDate(Date minDate ,Date maxDate) {

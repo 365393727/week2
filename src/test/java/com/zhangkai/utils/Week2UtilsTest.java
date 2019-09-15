@@ -28,7 +28,11 @@ public class Week2UtilsTest {
 	 */
 	@Test
 	public void testToHtml() {
-		
+		String src="字符串转换成html文本，如果遇到\\n换行换符，则要将这一段文本使用标签\\n。" + 
+				"包起来。如果遇到两个在一起按上面处理。\\n\\r”如果只遇到一个则替换成标签。" + 
+				"使用场景：网页文本框传到后台的字符串就可能就会回车换行。";
+		String string = Week2Utils.toHtml(src);
+		System.out.println(string);
 	}
 
 	/**
@@ -38,7 +42,7 @@ public class Week2UtilsTest {
 	public void testIsPhone() {
 		String src ="15835039150";
 		String s ="12345678910";
-		boolean b = StringUtil.isPhone(s);
+		boolean b = Week2Utils.isPhone(src);
 		System.out.println(b);
 	}
 
@@ -49,7 +53,7 @@ public class Week2UtilsTest {
 	public void testIsEmail() {
 		String src ="365393727@qq.com";
 		String s ="12345678910";
-		boolean b = StringUtil.isEmail(s);
+		boolean b = Week2Utils.isEmail(src);
 		System.out.println(b);
 		
 	}
